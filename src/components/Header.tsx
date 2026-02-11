@@ -3,12 +3,12 @@ export default function Header() {
     <header className="border-b border-gray-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <img src="/favicon.svg" alt="Traverse Ridge Digital Logo" className="h-10 w-10" />
             <h1 className="text-2xl font-bold tracking-tight text-gray-900">
               Traverse Ridge Digital
             </h1>
-          </div>
+          </a>
           <nav>
             <ul className="flex gap-6">
               <li>
