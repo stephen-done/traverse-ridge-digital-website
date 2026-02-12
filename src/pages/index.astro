@@ -1,21 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header';
+import Home from '../components/Home';
 ---
 
 <Layout title="Traverse Ridge Digital">
-  <Header />
-  <main class="mx-auto max-w-7xl px-6 py-12">
-    <div class="max-w-3xl">
-      <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-6">
-        Custom Software Solutions
-      </h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-4">
-        Traverse Ridge Digital is a custom software company specializing in innovative software engineering services and custom applications. We build tailored solutions that meet your unique business needs.
-      </p>
-      <p class="text-lg text-gray-700 leading-relaxed">
-        Our expertise spans mobile and web application development, delivering high-quality software that helps businesses thrive in the digital age.
-      </p>
-    </div>
-  </main>
+  <Header client:load />
+  <Home client:load />
 </Layout>

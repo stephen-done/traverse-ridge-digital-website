@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Provider, defaultTheme } from '@adobe/react-spectrum';
 
 interface Props {
   title: string;
@@ -18,7 +19,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-white text-gray-900 antialiased">
-    <slot />
+  <body>
+    <Provider theme={defaultTheme} colorScheme="light">
+      <slot />
+    </Provider>
   </body>
 </html>
