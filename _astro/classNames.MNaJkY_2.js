@@ -1,0 +1,1 @@
+import{h as a}from"./View.FGNew1sc.js";function h(e,...r){let p=[];for(let f of r)if(typeof f=="object"&&f){let i={};for(let t in f)e[t]&&(i[e[t]]=f[t]),e[t]||(i[t]=f[t]);p.push(i)}else typeof f=="string"?(e[f]&&p.push(e[f]),e[f]||p.push(f)):p.push(f);return a(...p)}export{h as $};
