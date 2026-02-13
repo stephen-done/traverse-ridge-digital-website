@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,8 +9,9 @@ export default defineConfig({
   base: '/',
   output: 'static',
   integrations: [react()],
-
   vite: {
-    plugins: [tailwindcss()]
-  }
+    ssr: {
+      noExternal: ['@adobe/react-spectrum', '@react-spectrum/*', '@spectrum-icons/*'],
+    },
+  },
 });

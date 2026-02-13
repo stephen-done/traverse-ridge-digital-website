@@ -1,30 +1,39 @@
+import { Flex, View, Heading, Image } from '@adobe/react-spectrum';
+
 export default function Header() {
   return (
-    <header className="border-b border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-4">
-        <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img src="/favicon.svg" alt="Traverse Ridge Digital Logo" className="h-10 w-10" />
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900">
-              Traverse Ridge Digital
-            </h1>
+    <View
+      backgroundColor="gray-50"
+      borderBottomWidth="thin"
+      borderBottomColor="gray-300"
+      paddingX="size-400"
+      paddingY="size-300"
+    >
+      <Flex maxWidth="size-6000" marginX="auto" justifyContent="space-between" alignItems="center">
+        <a
+          href="/"
+          style={{
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            color: 'inherit',
+          }}
+        >
+          <Image src="/favicon.svg" alt="Traverse Ridge Digital Logo" height="size-500" />
+          <Heading level={1} margin={0}>
+            Traverse Ridge Digital
+          </Heading>
+        </a>
+        <Flex gap="size-300" UNSAFE_style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            Home
           </a>
-          <nav>
-            <ul className="flex gap-6">
-              <li>
-                <a href="/" className="text-gray-700 hover:text-gray-900 font-medium">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/apps" className="text-gray-700 hover:text-gray-900 font-medium">
-                  Apps
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+          <a href="/apps" style={{ textDecoration: 'none', color: 'inherit' }}>
+            Apps
+          </a>
+        </Flex>
+      </Flex>
+    </View>
   );
 }
