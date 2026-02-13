@@ -1,4 +1,4 @@
-import { Flex, View, Heading, Image } from '@adobe/react-spectrum';
+import { Flex, View, Image } from '@adobe/react-spectrum';
 
 export default function Header() {
   return (
@@ -20,12 +20,14 @@ export default function Header() {
             color: 'inherit',
           }}
         >
-          <Image src="/favicon.svg" alt="Traverse Ridge Digital Logo" height="size-500" />
-          <Heading level={1} margin={0}>
-            Traverse Ridge Digital
-          </Heading>
+          <Image
+            src="/logo.jpeg"
+            alt="Traverse Ridge Digital Logo"
+            height="size-500"
+            objectFit="contain"
+          />
         </a>
-        <Flex gap="size-300" UNSAFE_style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+        <Flex gap="size-300" UNSAFE_style={{ listStyle: 'none', margin: 10, padding: 0 }}>
           <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             Home
           </a>

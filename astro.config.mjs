@@ -10,8 +10,21 @@ export default defineConfig({
   output: 'static',
   integrations: [react()],
   vite: {
+    resolve: {
+      alias: {
+        '@babel/runtime/helpers/extends': '@babel/runtime/helpers/esm/extends',
+      },
+    },
+    optimizeDeps: {
+      include: ['@babel/runtime/helpers/extends'],
+    },
     ssr: {
-      noExternal: ['@adobe/react-spectrum', '@react-spectrum/*', '@spectrum-icons/*'],
+      noExternal: [
+        '@adobe/react-spectrum',
+        /^@react-spectrum\//,
+        /^@spectrum-icons\//,
+        /^@babel\/runtime/,
+      ],
     },
   },
 });
