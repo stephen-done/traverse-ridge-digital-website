@@ -5,7 +5,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://traverseridgedigital.com',
+  site: 'https://www.traverseridgedigital.com',
   base: '/',
   output: 'static',
   integrations: [react()],
